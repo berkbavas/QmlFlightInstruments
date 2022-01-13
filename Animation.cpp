@@ -38,6 +38,16 @@ void Animation::update()
     mPfd->setDmeDistance(99.0 * sin(mPlayTime / 100.0));
     mPfd->setAirspeedBug(-50.0 * cos(mPlayTime / 10.0) + 50.0);
     mPfd->setAltitudeBug(-1000.0 * cos(mPlayTime / 40.0) + 1000.0);
+
+    mPfd->setLeftTankFuel(15 - 15 * cos(mPlayTime / 10.0));
+    mPfd->setRightTankFuel(15 - 15 * cos(mPlayTime / 20.0));
+    mPfd->setEgt(1300 - 600 * cos(mPlayTime / 10.0));
+    mPfd->setFuelFlow(10 - 10 * cos(mPlayTime / 10.0));
+    mPfd->setEngineTemperature(160 - 85 * cos(mPlayTime / 10.0));
+    mPfd->setEnginePressure(57.5 - 57.5 * cos(mPlayTime / 10.0));
+    mPfd->setVac(5 - 2 * cos(mPlayTime / 5.0));
+    mPfd->setAmp(60 * sin(mPlayTime / 10.0));
+    mPfd->setRpm(1750 - 1750 * cos(mPlayTime / 10.0));
 }
 
 void Animation::init()

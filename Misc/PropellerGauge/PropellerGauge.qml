@@ -5,6 +5,7 @@ import QtQuick.Extras 1.4
 
 Item {
     property double radius: 300
+    property double rpm: 0
 
     width: 2 * radius
     height: 2 * radius
@@ -17,7 +18,7 @@ Item {
         minimumValue: 0
         maximumValue: 3500
         stepSize: 1
-        value: 0
+        value: rpm
         style: PropellerGaugeStyle {}
 
     }

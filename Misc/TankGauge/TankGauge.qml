@@ -8,8 +8,10 @@ Item {
     width: 2 * radius
     height: 2 * radius
 
+    property double leftTankFuel: 0
+    property double rightTankFuel: 0
+
     Rectangle {
-        id: rectangle
         width: 2 * radius
         height: 2 * radius
         radius: parent.radius
@@ -22,6 +24,7 @@ Item {
             y: 0
             width: parent.width
             height: parent.height
+            value: leftTankFuel
         }
 
         RightTankGauge {
@@ -29,6 +32,7 @@ Item {
             y: 0
             width: parent.width
             height: parent.height
+            value: rightTankFuel
         }
 
         CustomText {

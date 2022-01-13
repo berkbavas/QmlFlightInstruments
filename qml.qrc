@@ -120,5 +120,8 @@
         <file>Misc/VacAmpGauge/AmpGauge.qml</file>
         <file>Misc/VacAmpGauge/VacAmpGauge.qml</file>
         <file>Misc/VacAmpGauge/VacGauge.qml</file>
+        <file>Misc/EgtFuelFlowGauge/EgtFuelFlowGauge.qml</file>
+        <file>Misc/EgtFuelFlowGauge/EgtGauge.qml</file>
+        <file>Misc/EgtFuelFlowGauge/FuelFlowGauge.qml</file>
     </qresource>
 </RCC>

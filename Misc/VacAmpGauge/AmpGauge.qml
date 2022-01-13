@@ -9,7 +9,7 @@ CircularGauge {
     id: root
     minimumValue: -60
     maximumValue: 60
-    stepSize: 1
+    stepSize: 0.01
     value: 0
 
     property double minimumValueAngle: -135

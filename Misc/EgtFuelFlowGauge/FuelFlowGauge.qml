@@ -7,27 +7,27 @@ import QtQuick.Controls.Styles 1.4
 
 CircularGauge {
     id: root
-    minimumValue: 3
-    maximumValue: 7
-    stepSize: 0.0001
+    minimumValue: -0
+    maximumValue: 20
+    stepSize: 0.001
     value: 0
 
-    property double minimumValueAngle: 135
-    property double maximumValueAngle: 45
+    property double minimumValueAngle: -125
+    property double maximumValueAngle: -55
 
     style: CircularGaugeStyle {
         id: style
         minimumValueAngle: root.minimumValueAngle
         maximumValueAngle: root.maximumValueAngle
-        tickmarkStepSize: 1
-        labelStepSize: 1
+        tickmarkStepSize: 2.5
+        labelStepSize: 5
         minorTickmarkCount: 0
 
-        labelInset: 0.25 * outerRadius
+        labelInset: 0.275 * outerRadius
         tickmarkInset: 0.02 * outerRadius
 
         tickmark: Rectangle {
-            color: "#ffffff"
+            color:  "#ffffff"
             width: 0.02 * outerRadius
             height: 0.115 * outerRadius
             radius: 0.01 * outerRadius
@@ -61,17 +61,37 @@ CircularGauge {
                     if(context)
                     {
                         context.reset()
-                        context.lineWidth = 0.075 * outerRadius
+                        context.lineWidth = 7 / 90 * outerRadius
                         context.beginPath()
                         context.arc(outerRadius,
                                 outerRadius,
-                                outerRadius - tickmarkInset - context.lineWidth  / 2 - 0.015 * outerRadius,
-                                (valueToAngle(5.5) - 90) *  Math.PI / 180.0,
-                                (valueToAngle(4.5) - 90) *  Math.PI / 180.0, false)
+                                outerRadius - tickmarkInset - context.lineWidth / 2,
+                                (valueToAngle(0) - 90) *  Math.PI / 180.0,
+                                (valueToAngle(11) - 90) *  Math.PI / 180.0)
                         context.strokeStyle = "#00c300"
                         context.stroke()
                     }
                 }
+            }
+
+            CustomText {
+                color: "#ffffff"
+                x: 0.1 * outerRadius
+                y: 1.6 * outerRadius
+                text: "GAL"
+                font.pixelSize: Math.max(6, 0.05 * parent.width)
+                horizontalAlignment: Text.AlignHCenter
+                verticalAlignment: Text.AlignVCenter
+            }
+
+            CustomText {
+                color: "#ffffff"
+                x: 0.145 * outerRadius
+                y: 1.725 * outerRadius
+                text: "HR"
+                font.pixelSize: Math.max(6, 0.05 * parent.width)
+                horizontalAlignment: Text.AlignHCenter
+                verticalAlignment: Text.AlignVCenter
             }
         }
     }

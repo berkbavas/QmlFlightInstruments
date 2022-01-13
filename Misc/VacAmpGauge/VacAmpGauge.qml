@@ -4,6 +4,8 @@ import QtQuick 2.0
 
 Item {
     property double radius: 300
+    property double vac: 0
+    property double amp: 0
 
     width: 2 * radius
     height: 2 * radius
@@ -22,6 +24,7 @@ Item {
             y: 0
             width: parent.width
             height: parent.height
+            value: vac
         }
 
         AmpGauge {
@@ -29,6 +32,7 @@ Item {
             y: 0
             width: parent.width
             height: parent.height
+            value: amp
         }
 
         GaugeMask {}

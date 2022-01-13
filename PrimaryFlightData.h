@@ -158,6 +158,33 @@ public:
     bool stall() const;
     void setStall(bool newStall);
 
+    double leftTankFuel() const;
+    void setLeftTankFuel(double newLeftTankFuel);
+
+    double rightTankFuel() const;
+    void setRightTankFuel(double newRightTankFuel);
+
+    double egt() const;
+    void setEgt(double newEgt);
+
+    double fuelFlow() const;
+    void setFuelFlow(double newFuelFlow);
+
+    double engineTemperature() const;
+    void setEngineTemperature(double newEngineTemperature);
+
+    double enginePressure() const;
+    void setEnginePressure(double newEnginePressure);
+
+    double vac() const;
+    void setVac(double newVac);
+
+    double amp() const;
+    void setAmp(double newAmp);
+
+    double rpm() const;
+    void setRpm(double newRpm);
+
 signals:
     void angleOfAttackChanged();
     void angleOfSideSlipChanged();
@@ -195,6 +222,24 @@ signals:
     void pressureModeChanged();
     void ilsLOCVisibleChanged();
     void ilsGSVisibleChanged();
+
+    void leftTankFuelChanged();
+
+    void rightTankFuelChanged();
+
+    void egtChanged();
+
+    void fuelFlowChanged();
+
+    void engineTemperatureChanged();
+
+    void enginePressureChanged();
+
+    void vacChanged();
+
+    void ampChanged();
+
+    void rpmChanged();
 
 private:
     double mAngleOfAttack;
@@ -234,6 +279,17 @@ private:
     bool mFdVisible;
     bool mStall;
 
+    // Misc
+    double mLeftTankFuel;
+    double mRightTankFuel;
+    double mEgt;
+    double mFuelFlow;
+    double mEngineTemperature;
+    double mEnginePressure;
+    double mVac;
+    double mAmp;
+    double mRpm;
+
     Q_PROPERTY(double angleOfAttack READ angleOfAttack NOTIFY angleOfAttackChanged)
     Q_PROPERTY(double angleOfSideSlip READ angleOfSideSlip NOTIFY angleOfSideSlipChanged)
     Q_PROPERTY(double roll READ roll NOTIFY rollChanged)
@@ -270,6 +326,16 @@ private:
     Q_PROPERTY(bool ilsGSVisible READ ilsGSVisible NOTIFY ilsGSVisibleChanged)
     Q_PROPERTY(bool stall READ stall NOTIFY stallChanged)
     Q_PROPERTY(bool fdVisible READ fdVisible NOTIFY fdVisibleChanged)
+
+    Q_PROPERTY(double leftTankFuel READ leftTankFuel WRITE setLeftTankFuel NOTIFY leftTankFuelChanged)
+    Q_PROPERTY(double rightTankFuel READ rightTankFuel WRITE setRightTankFuel NOTIFY rightTankFuelChanged)
+    Q_PROPERTY(double egt READ egt WRITE setEgt NOTIFY egtChanged)
+    Q_PROPERTY(double fuelFlow READ fuelFlow WRITE setFuelFlow NOTIFY fuelFlowChanged)
+    Q_PROPERTY(double engineTemperature READ engineTemperature WRITE setEngineTemperature NOTIFY engineTemperatureChanged)
+    Q_PROPERTY(double enginePressure READ enginePressure WRITE setEnginePressure NOTIFY enginePressureChanged)
+    Q_PROPERTY(double vac READ vac WRITE setVac NOTIFY vacChanged)
+    Q_PROPERTY(double amp READ amp WRITE setAmp NOTIFY ampChanged)
+    Q_PROPERTY(double rpm READ rpm WRITE setRpm NOTIFY rpmChanged)
 };
 
 #endif // PRIMARYFLIGHTDATA_H

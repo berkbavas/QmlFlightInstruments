@@ -4,11 +4,12 @@ import QtQuick 2.0
 
 Item {
     property double radius: 300
-    property double engineTemperature: 0
-    property double enginePressure: 0
 
     width: 2 * radius
     height: 2 * radius
+
+    property double egt: 0
+    property double fuelFlow: 0
 
     Rectangle {
         width: 2 * radius
@@ -18,58 +19,63 @@ Item {
         color: "#181818"
         scale: 0.775
 
-        TemperatureGauge {
+        EgtGauge {
             x: -0.525 * width
             y: 0
             width: parent.width
             height: parent.height
-            value: engineTemperature
+            value: egt
         }
 
-        PressureGauge {
+        FuelFlowGauge {
             x: 0.525 * width
             y: 0
             width: parent.width
             height: parent.height
-            value: enginePressure
+            value: fuelFlow
         }
 
         GaugeMask {}
-
-        CustomText {
-            x: 110 / 300 * parent.radius
-            color: "#ffffff"
-            text: "°F"
-            anchors.verticalCenter: parent.verticalCenter
-            font.pixelSize: Math.max(6, 0.05 * parent.width)
-            horizontalAlignment: Text.AlignHCenter
-            lineHeight: 0.8
-            wrapMode: Text.Wrap
-        }
 
         CustomText {
             x: 30 / 300 * parent.radius
             width: 40 / 300 * parent.radius
             height: 195 / 300 * parent.radius
             color: "#ffffff"
-            text: "TEMP"
+            text: "EGT"
             anchors.verticalCenter: parent.verticalCenter
             font.pixelSize: Math.max(6, 0.075 * parent.width)
             horizontalAlignment: Text.AlignHCenter
-            lineHeight: 0.8
+            verticalAlignment: Text.AlignVCenter
+            lineHeight: 1
             wrapMode: Text.Wrap
         }
 
         CustomText {
             x: 530 / 300 * parent.radius
-            width: 40 / 300 * parent.radius
+            width: 20 / 300 * parent.radius
             height: 230 / 300 * parent.radius
             color: "#ffffff"
-            text: "PRESS"
+            text: "FUEL"
             anchors.verticalCenter: parent.verticalCenter
-            font.pixelSize: Math.max(6, 0.075 * parent.width)
+            font.pixelSize: Math.max(6, 0.05 * parent.width)
             horizontalAlignment: Text.AlignHCenter
-            lineHeight: 0.8
+            verticalAlignment: Text.AlignVCenter
+            lineHeight: 1
+            wrapMode: Text.Wrap
+        }
+
+        CustomText {
+            x: 560 / 300 * parent.radius
+            width: 30 / 300 * parent.radius
+            height: 230 / 300 * parent.radius
+            color: "#ffffff"
+            text: "F LOW"
+            anchors.verticalCenter: parent.verticalCenter
+            font.pixelSize: Math.max(6, 0.05 * parent.width)
+            horizontalAlignment: Text.AlignHCenter
+            verticalAlignment: Text.AlignVCenter
+            lineHeight: 1
             wrapMode: Text.Wrap
         }
     }
@@ -79,3 +85,10 @@ Item {
         source: "../../Resources/misc/case.svg"
     }
 }
+
+
+/*##^##
+Designer {
+    D{i:0;formeditorColor:"#000000"}D{i:2}D{i:3}D{i:4}D{i:5}D{i:6}D{i:7}D{i:1}D{i:8}
+}
+##^##*/

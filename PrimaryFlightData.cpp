@@ -598,3 +598,120 @@ void PrimaryFlightData::setStall(bool newStall)
     mStall = newStall;
     emit stallChanged();
 }
+
+double PrimaryFlightData::leftTankFuel() const
+{
+    return mLeftTankFuel;
+}
+
+void PrimaryFlightData::setLeftTankFuel(double newLeftTankFuel)
+{
+    if (isnan(newLeftTankFuel) || qFuzzyCompare(mLeftTankFuel, newLeftTankFuel))
+        return;
+    mLeftTankFuel = newLeftTankFuel;
+    emit leftTankFuelChanged();
+}
+
+double PrimaryFlightData::rightTankFuel() const
+{
+    return mRightTankFuel;
+}
+
+void PrimaryFlightData::setRightTankFuel(double newRightTankFuel)
+{
+    if (isnan(newRightTankFuel) || qFuzzyCompare(mRightTankFuel, newRightTankFuel))
+        return;
+    mRightTankFuel = newRightTankFuel;
+    emit rightTankFuelChanged();
+}
+
+double PrimaryFlightData::egt() const
+{
+    return mEgt;
+}
+
+void PrimaryFlightData::setEgt(double newEgt)
+{
+    if (isnan(newEgt) || qFuzzyCompare(mEgt, newEgt))
+        return;
+    mEgt = newEgt;
+    emit egtChanged();
+}
+
+double PrimaryFlightData::fuelFlow() const
+{
+    return mFuelFlow;
+}
+
+void PrimaryFlightData::setFuelFlow(double newFuelFlow)
+{
+    if (isnan(newFuelFlow) || qFuzzyCompare(mFuelFlow, newFuelFlow))
+        return;
+    mFuelFlow = newFuelFlow;
+    emit fuelFlowChanged();
+}
+
+double PrimaryFlightData::engineTemperature() const
+{
+    return mEngineTemperature;
+}
+
+void PrimaryFlightData::setEngineTemperature(double newEngineTemperature)
+{
+    if (isnan(newEngineTemperature) || qFuzzyCompare(mEngineTemperature, newEngineTemperature))
+        return;
+    mEngineTemperature = newEngineTemperature;
+    emit engineTemperatureChanged();
+}
+
+double PrimaryFlightData::enginePressure() const
+{
+    return mEnginePressure;
+}
+
+void PrimaryFlightData::setEnginePressure(double newEnginePressure)
+{
+    if (isnan(newEnginePressure) || qFuzzyCompare(mEnginePressure, newEnginePressure))
+        return;
+    mEnginePressure = newEnginePressure;
+    emit enginePressureChanged();
+}
+
+double PrimaryFlightData::vac() const
+{
+    return mVac;
+}
+
+void PrimaryFlightData::setVac(double newVac)
+{
+    if (isnan(newVac) || qFuzzyCompare(mVac, newVac))
+        return;
+    mVac = newVac;
+    emit vacChanged();
+}
+
+double PrimaryFlightData::amp() const
+{
+    return mAmp;
+}
+
+void PrimaryFlightData::setAmp(double newAmp)
+{
+    if (isnan(newAmp) || qFuzzyCompare(mAmp, newAmp))
+        return;
+    mAmp = newAmp;
+    emit ampChanged();
+}
+
+double PrimaryFlightData::rpm() const
+{
+    return mRpm;
+}
+
+void PrimaryFlightData::setRpm(double newRpm)
+{
+    if (isnan(newRpm) || qFuzzyCompare(mRpm, newRpm))
+        return;
+    mRpm = newRpm;
+    emit rpmChanged();
+}
