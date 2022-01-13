@@ -71,9 +71,7 @@ CircularGaugeStyle {
                 if(context)
                 {
                     context.reset()
-
                     context.lineWidth = 7 / 90 * outerRadius
-
                     context.beginPath()
                     context.arc(outerRadius,
                             outerRadius,

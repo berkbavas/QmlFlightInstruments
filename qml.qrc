@@ -114,5 +114,8 @@
         <file>Misc/CustomText.qml</file>
         <file>Misc/CustomCanvas.qml</file>
         <file>Misc/GaugeMask.qml</file>
+        <file>Misc/TemperaturePressureGauge/PressureGauge.qml</file>
+        <file>Misc/TemperaturePressureGauge/TemperatureGauge.qml</file>
+        <file>Misc/TemperaturePressureGauge/TemperaturePressureGauge.qml</file>
     </qresource>
 </RCC>

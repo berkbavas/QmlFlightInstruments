@@ -1,5 +1,6 @@
 import "Misc/PropellerGauge"
 import "Misc/TankGauge"
+import "Misc/TemperaturePressureGauge"
 
 import QtQuick 2.15
 import QtQuick.Window 2.15
@@ -13,8 +14,6 @@ Window {
     title: "Miscellaneous Gauges Example"
     color: "#ffffff"
 
-    // Test
-
     GridLayout {
         columns: 2
 
@@ -24,11 +23,15 @@ Window {
         }
 
         TankGauge {
-            radius: 300
+            radius: 200
         }
 
         PropellerGauge {
-            radius: 300
+            radius: 200
+        }
+
+        TemperaturePressureGauge {
+            radius: 200
         }
     }
 }
