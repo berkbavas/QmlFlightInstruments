@@ -35,7 +35,6 @@ CircularGauge {
             height: style.tickmarkHeight
             radius: 0.01 * outerRadius
             antialiasing: true
-
             visible:  styleData.value === 0 ||
                       styleData.value === 20 ||
                       styleData.value === 40 ||
@@ -77,9 +76,7 @@ CircularGauge {
                     if(context)
                     {
                         context.reset()
-
                         context.lineWidth = 0.075 * outerRadius
-
                         context.beginPath()
                         context.arc(outerRadius,
                                 outerRadius,

@@ -117,5 +117,8 @@
         <file>Misc/TemperaturePressureGauge/PressureGauge.qml</file>
         <file>Misc/TemperaturePressureGauge/TemperatureGauge.qml</file>
         <file>Misc/TemperaturePressureGauge/TemperaturePressureGauge.qml</file>
+        <file>Misc/VacAmpGauge/AmpGauge.qml</file>
+        <file>Misc/VacAmpGauge/VacAmpGauge.qml</file>
+        <file>Misc/VacAmpGauge/VacGauge.qml</file>
     </qresource>
 </RCC>

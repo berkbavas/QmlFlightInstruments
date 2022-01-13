@@ -7,34 +7,29 @@ import QtQuick.Controls.Styles 1.4
 
 CircularGauge {
     id: root
-    minimumValue: 0
-    maximumValue: 30
-    stepSize: 0.1
+    minimumValue: 3
+    maximumValue: 7
+    stepSize: 0.01
     value: 0
-
 
     property double minimumValueAngle: 135
     property double maximumValueAngle: 45
-    property bool positiveDirectionIsClockwise: false
 
     style: CircularGaugeStyle {
         id: style
-
-        property double tickmarkHeight: 0.15 * outerRadius
-
         minimumValueAngle: root.minimumValueAngle
         maximumValueAngle: root.maximumValueAngle
-        tickmarkStepSize: 5
-        labelStepSize: 10
+        tickmarkStepSize: 1
+        labelStepSize: 1
         minorTickmarkCount: 0
 
-        labelInset: 0.275 * outerRadius
+        labelInset: 0.25 * outerRadius
         tickmarkInset: 0.02 * outerRadius
 
         tickmark: Rectangle {
-            color: styleData.value === 0 ? "#e30000" :  "#ffffff"
+            color: "#ffffff"
             width: 0.02 * outerRadius
-            height: style.tickmarkHeight
+            height: 0.115 * outerRadius
             radius: 0.01 * outerRadius
             antialiasing: true
         }
@@ -66,17 +61,14 @@ CircularGauge {
                     if(context)
                     {
                         context.reset()
-
-                        context.lineWidth = 0.045 * outerRadius
-
+                        context.lineWidth = 0.075 * outerRadius
                         context.beginPath()
                         context.arc(outerRadius,
                                 outerRadius,
-                                outerRadius - tickmarkInset - style.tickmarkHeight / 2,
-                                (valueToAngle(root.maximumValue) - 90) *  Math.PI / 180.0,
-                                (valueToAngle(root.minimumValue) - 90) *  Math.PI / 180.0,
-                                root.positiveDirectionIsClockwise)
-                        context.strokeStyle = "#ffffff"
+                                outerRadius - tickmarkInset - context.lineWidth  / 2 - 0.015 * outerRadius,
+                                (valueToAngle(5.5) - 90) *  Math.PI / 180.0,
+                                (valueToAngle(4.5) - 90) *  Math.PI / 180.0, false)
+                        context.strokeStyle = "#00c300"
                         context.stroke()
                     }
                 }

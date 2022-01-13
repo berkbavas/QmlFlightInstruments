@@ -18,7 +18,6 @@ Item {
         scale: 0.775
 
         TemperatureGauge {
-            id: leftGauge
             x: -0.525 * width
             y: 0
             width: parent.width
@@ -26,13 +25,11 @@ Item {
         }
 
         PressureGauge {
-            id: rightGauge
             x: 0.525 * width
-            y: 2
+            y: 0
             width: parent.width
             height: parent.height
         }
-
 
         GaugeMask {}
 
@@ -72,8 +69,6 @@ Item {
             lineHeight: 0.8
             wrapMode: Text.Wrap
         }
-
-
     }
 
     CustomImage {

@@ -12,7 +12,6 @@ CircularGauge {
     stepSize: 0.1
     value: 0
 
-
     property double minimumValueAngle: 135
     property double maximumValueAngle: 45
     property bool positiveDirectionIsClockwise: false
@@ -66,9 +65,7 @@ CircularGauge {
                     if(context)
                     {
                         context.reset()
-
                         context.lineWidth = 0.045 * outerRadius
-
                         context.beginPath()
                         context.arc(outerRadius,
                                 outerRadius,

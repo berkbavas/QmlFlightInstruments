@@ -1,6 +1,7 @@
 import "Misc/PropellerGauge"
 import "Misc/TankGauge"
 import "Misc/TemperaturePressureGauge"
+import "Misc/VacAmpGauge"
 
 import QtQuick 2.15
 import QtQuick.Window 2.15
@@ -31,6 +32,10 @@ Window {
         }
 
         TemperaturePressureGauge {
+            radius: 200
+        }
+
+        VacAmpGauge {
             radius: 200
         }
     }

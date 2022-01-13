@@ -17,72 +17,61 @@ Item {
         color: "#181818"
         scale: 0.775
 
-        LeftTankGauge {
-            x: -0.55 * width
+        VacGauge {
+            x: -0.525 * width
             y: 0
             width: parent.width
             height: parent.height
         }
 
-        RightTankGauge {
-            x: 0.55 * width
+        AmpGauge {
+            x: 0.525 * width
             y: 0
             width: parent.width
             height: parent.height
-        }
-
-        CustomText {
-            y: 20
-            text: "FULL"
-            font.pixelSize: Math.max(6, 0.1 * parent.width)
-            anchors.horizontalCenter: parent.horizontalCenter
-        }
-
-        CustomText {
-            y: 450 / 300 * parent.radius
-            height: 20 / 300 * parent.radius
-            text: "GALLONS"
-            anchors.left: qtyText.left
-            anchors.right: qtyText.right
-            color: "#ffffff"
-            font.pixelSize: Math.max(6, 0.04 * parent.width)
-            horizontalAlignment: Text.AlignHCenter
-        }
-
-        CustomText {
-            id: qtyText
-            y: 510 / 300 * parent.radius
-            color: "#ffffff"
-            text: "QTY"
-            font.pixelSize: Math.max(6, 0.1 * parent.width)
-            anchors.horizontalCenter: parent.horizontalCenter
         }
 
         GaugeMask {}
 
         CustomText {
-            x: 30 / 300 * parent.radius
-            width: 30 / 300 * parent.radius
-            height: 195 / 300 * parent.radius
+            x: 110 / 300 * parent.radius
+            width: 70 / 300 * parent.radius
+            height: 90 / 300 * parent.radius
             color: "#ffffff"
-            text: "LEFT"
+            text: "IN. Hg."
             anchors.verticalCenter: parent.verticalCenter
-            font.pixelSize: Math.max(6, 0.075 * parent.width)
-            horizontalAlignment: Text.AlignHCenter
+            font.pixelSize: Math.max(6, 0.05 * parent.width)
+            horizontalAlignment: Text.AlignLeft
+            verticalAlignment: Text.AlignVCenter
             lineHeight: 0.8
             wrapMode: Text.Wrap
         }
 
         CustomText {
-            x: 540 / 300 * parent.radius
-            width: 30 / 300 * parent.radius
-            height: 230 / 300 * parent.radius
+            x: 30 / 300 * parent.radius
+            width: 40 / 300 * parent.radius
+            height: 195 / 300 * parent.radius
             color: "#ffffff"
-            text: "RIGHT"
+            text: "VAC"
             anchors.verticalCenter: parent.verticalCenter
             font.pixelSize: Math.max(6, 0.075 * parent.width)
             horizontalAlignment: Text.AlignHCenter
-            lineHeight: 0.8
+            verticalAlignment: Text.AlignVCenter
+            lineHeight: 1
+            wrapMode: Text.Wrap
+        }
+
+        CustomText {
+            x: 530 / 300 * parent.radius
+            width: 40 / 300 * parent.radius
+            height: 230 / 300 * parent.radius
+            color: "#ffffff"
+            text: "AMP"
+            anchors.verticalCenter: parent.verticalCenter
+            font.pixelSize: Math.max(6, 0.075 * parent.width)
+            horizontalAlignment: Text.AlignHCenter
+            verticalAlignment: Text.AlignVCenter
+            lineHeight: 1
             wrapMode: Text.Wrap
         }
     }
@@ -96,7 +85,6 @@ Item {
 
 /*##^##
 Designer {
-    D{i:0;formeditorColor:"#000000"}D{i:2}D{i:3}D{i:4}D{i:5}D{i:6}D{i:7}D{i:8}D{i:9}D{i:1}
-D{i:10}
+    D{i:0;formeditorColor:"#000000"}D{i:2}D{i:3}D{i:4}D{i:5}D{i:6}D{i:7}D{i:1}D{i:8}
 }
 ##^##*/
