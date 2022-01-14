@@ -1,4 +1,5 @@
 #include "PrimaryFlightData.h"
+#include <cmath>
 
 PrimaryFlightData::PrimaryFlightData(QObject *parent)
     : QObject(parent)
@@ -44,7 +45,7 @@ double PrimaryFlightData::angleOfAttack() const
 
 void PrimaryFlightData::setAngleOfAttack(double newAngleOfAttack)
 {
-    if (isnan(newAngleOfAttack) || qFuzzyCompare(mAngleOfAttack, newAngleOfAttack))
+    if (std::isnan(newAngleOfAttack) || qFuzzyCompare(mAngleOfAttack, newAngleOfAttack))
         return;
 
     if (newAngleOfAttack < -20)
@@ -63,7 +64,7 @@ double PrimaryFlightData::angleOfSideSlip() const
 
 void PrimaryFlightData::setAngleOfSideSlip(double newAngleOfSideSlip)
 {
-    if (isnan(newAngleOfSideSlip) || qFuzzyCompare(mAngleOfSideSlip, newAngleOfSideSlip))
+    if (std::isnan(newAngleOfSideSlip) || qFuzzyCompare(mAngleOfSideSlip, newAngleOfSideSlip))
         return;
 
     if (newAngleOfSideSlip < -15)
@@ -82,7 +83,7 @@ double PrimaryFlightData::roll() const
 
 void PrimaryFlightData::setRoll(double newRoll)
 {
-    if (isnan(newRoll) || qFuzzyCompare(mRoll, newRoll))
+    if (std::isnan(newRoll) || qFuzzyCompare(mRoll, newRoll))
         return;
 
     if (newRoll < -180)
@@ -101,7 +102,7 @@ double PrimaryFlightData::pitch() const
 
 void PrimaryFlightData::setPitch(double newPitch)
 {
-    if (isnan(newPitch) || qFuzzyCompare(mPitch, newPitch))
+    if (std::isnan(newPitch) || qFuzzyCompare(mPitch, newPitch))
         return;
 
     if (newPitch < -90)
@@ -120,7 +121,7 @@ double PrimaryFlightData::heading() const
 
 void PrimaryFlightData::setHeading(double newHeading)
 {
-    if (isnan(newHeading) || qFuzzyCompare(mHeading, newHeading))
+    if (std::isnan(newHeading) || qFuzzyCompare(mHeading, newHeading))
         return;
 
     while (newHeading < 0.0)
@@ -139,7 +140,7 @@ double PrimaryFlightData::slipSkid() const
 
 void PrimaryFlightData::setSlipSkid(double newSlipSkid)
 {
-    if (isnan(newSlipSkid) || qFuzzyCompare(mSlipSkid, newSlipSkid))
+    if (std::isnan(newSlipSkid) || qFuzzyCompare(mSlipSkid, newSlipSkid))
         return;
 
     if (newSlipSkid < -1)
@@ -158,7 +159,7 @@ double PrimaryFlightData::turnRate() const
 
 void PrimaryFlightData::setTurnRate(double newTurnRate)
 {
-    if (isnan(newTurnRate) || qFuzzyCompare(mTurnRate, newTurnRate))
+    if (std::isnan(newTurnRate) || qFuzzyCompare(mTurnRate, newTurnRate))
         return;
 
     if (newTurnRate < -1)
@@ -177,7 +178,7 @@ double PrimaryFlightData::airspeed() const
 
 void PrimaryFlightData::setAirspeed(double newAirspeed)
 {
-    if (isnan(newAirspeed) || qFuzzyCompare(mAirspeed, newAirspeed))
+    if (std::isnan(newAirspeed) || qFuzzyCompare(mAirspeed, newAirspeed))
         return;
 
     if (newAirspeed < 0)
@@ -196,7 +197,7 @@ double PrimaryFlightData::machNumber() const
 
 void PrimaryFlightData::setMachNumber(double newMachNumber)
 {
-    if (isnan(newMachNumber) || qFuzzyCompare(mMachNumber, newMachNumber))
+    if (std::isnan(newMachNumber) || qFuzzyCompare(mMachNumber, newMachNumber))
         return;
 
     if (newMachNumber < 0)
@@ -215,7 +216,7 @@ double PrimaryFlightData::altitude() const
 
 void PrimaryFlightData::setAltitude(double newAltitude)
 {
-    if (isnan(newAltitude) || qFuzzyCompare(mAltitude, newAltitude))
+    if (std::isnan(newAltitude) || qFuzzyCompare(mAltitude, newAltitude))
         return;
 
     if (newAltitude < 0)
@@ -234,7 +235,7 @@ double PrimaryFlightData::pressure() const
 
 void PrimaryFlightData::setPressure(double newPressure)
 {
-    if (isnan(newPressure) || qFuzzyCompare(mPressure, newPressure))
+    if (std::isnan(newPressure) || qFuzzyCompare(mPressure, newPressure))
         return;
 
     if (newPressure < 0)
@@ -253,7 +254,7 @@ double PrimaryFlightData::climbRate() const
 
 void PrimaryFlightData::setClimbRate(double newClimbRate)
 {
-    if (isnan(newClimbRate) || qFuzzyCompare(mClimbRate, newClimbRate))
+    if (std::isnan(newClimbRate) || qFuzzyCompare(mClimbRate, newClimbRate))
         return;
 
     if (newClimbRate > 6.8)
@@ -272,7 +273,7 @@ double PrimaryFlightData::ilsLOC() const
 
 void PrimaryFlightData::setIlsLOC(double newIlsLOC)
 {
-    if (isnan(newIlsLOC) || qFuzzyCompare(mIlsLOC, newIlsLOC))
+    if (std::isnan(newIlsLOC) || qFuzzyCompare(mIlsLOC, newIlsLOC))
         return;
 
     if (newIlsLOC < -1)
@@ -291,7 +292,7 @@ double PrimaryFlightData::ilsGS() const
 
 void PrimaryFlightData::setIlsGS(double newIlsGS)
 {
-    if (isnan(newIlsGS) || qFuzzyCompare(mIlsGS, newIlsGS))
+    if (std::isnan(newIlsGS) || qFuzzyCompare(mIlsGS, newIlsGS))
         return;
 
     if (newIlsGS < -1)
@@ -310,7 +311,7 @@ double PrimaryFlightData::fdRoll() const
 
 void PrimaryFlightData::setFdRoll(double newFdRoll)
 {
-    if (isnan(newFdRoll) || qFuzzyCompare(mFdRoll, newFdRoll))
+    if (std::isnan(newFdRoll) || qFuzzyCompare(mFdRoll, newFdRoll))
         return;
 
     if (newFdRoll < -180)
@@ -329,7 +330,7 @@ double PrimaryFlightData::fdPitch() const
 
 void PrimaryFlightData::setFdPitch(double newFdPitch)
 {
-    if (isnan(newFdPitch) || qFuzzyCompare(mFdPitch, newFdPitch))
+    if (std::isnan(newFdPitch) || qFuzzyCompare(mFdPitch, newFdPitch))
         return;
 
     if (newFdPitch < -90)
@@ -348,7 +349,7 @@ double PrimaryFlightData::altitudeBug() const
 
 void PrimaryFlightData::setAltitudeBug(double newAltitudeBug)
 {
-    if (isnan(newAltitudeBug) || qFuzzyCompare(mAltitudeBug, newAltitudeBug))
+    if (std::isnan(newAltitudeBug) || qFuzzyCompare(mAltitudeBug, newAltitudeBug))
         return;
 
     if (newAltitudeBug < 0)
@@ -367,7 +368,7 @@ double PrimaryFlightData::airspeedBug() const
 
 void PrimaryFlightData::setAirspeedBug(double newAirspeedBug)
 {
-    if (isnan(newAirspeedBug) || qFuzzyCompare(mAirspeedBug, newAirspeedBug))
+    if (std::isnan(newAirspeedBug) || qFuzzyCompare(mAirspeedBug, newAirspeedBug))
         return;
 
     if (newAirspeedBug < 0)
@@ -386,7 +387,7 @@ double PrimaryFlightData::headingBug() const
 
 void PrimaryFlightData::setHeadingBug(double newHeadingBug)
 {
-    if (isnan(newHeadingBug) || qFuzzyCompare(mHeadingBug, newHeadingBug))
+    if (std::isnan(newHeadingBug) || qFuzzyCompare(mHeadingBug, newHeadingBug))
         return;
 
     while (newHeadingBug < 0.0)
@@ -405,7 +406,7 @@ double PrimaryFlightData::course() const
 
 void PrimaryFlightData::setCourse(double newCourse)
 {
-    if (isnan(newCourse) || qFuzzyCompare(mCourse, newCourse))
+    if (std::isnan(newCourse) || qFuzzyCompare(mCourse, newCourse))
         return;
 
     while (newCourse < 0.0)
@@ -424,7 +425,7 @@ double PrimaryFlightData::vorDeviation() const
 
 void PrimaryFlightData::setVorDeviation(double newVorDeviation)
 {
-    if (isnan(newVorDeviation) || qFuzzyCompare(mVorDeviation, newVorDeviation))
+    if (std::isnan(newVorDeviation) || qFuzzyCompare(mVorDeviation, newVorDeviation))
         return;
 
     if (newVorDeviation < -1.0)
@@ -443,7 +444,7 @@ double PrimaryFlightData::bearing() const
 
 void PrimaryFlightData::setBearing(double newBearing)
 {
-    if (isnan(newBearing) || qFuzzyCompare(mBearing, newBearing))
+    if (std::isnan(newBearing) || qFuzzyCompare(mBearing, newBearing))
         return;
 
     while (newBearing < 0.0)
@@ -462,7 +463,7 @@ double PrimaryFlightData::dmeDistance() const
 
 void PrimaryFlightData::setDmeDistance(double newDmeDistance)
 {
-    if (isnan(newDmeDistance) || qFuzzyCompare(mDmeDistance, newDmeDistance))
+    if (std::isnan(newDmeDistance) || qFuzzyCompare(mDmeDistance, newDmeDistance))
         return;
 
     mDmeDistance = abs(newDmeDistance);
@@ -606,7 +607,7 @@ double PrimaryFlightData::leftTankFuel() const
 
 void PrimaryFlightData::setLeftTankFuel(double newLeftTankFuel)
 {
-    if (isnan(newLeftTankFuel) || qFuzzyCompare(mLeftTankFuel, newLeftTankFuel))
+    if (std::isnan(newLeftTankFuel) || qFuzzyCompare(mLeftTankFuel, newLeftTankFuel))
         return;
     mLeftTankFuel = newLeftTankFuel;
     emit leftTankFuelChanged();
@@ -619,7 +620,7 @@ double PrimaryFlightData::rightTankFuel() const
 
 void PrimaryFlightData::setRightTankFuel(double newRightTankFuel)
 {
-    if (isnan(newRightTankFuel) || qFuzzyCompare(mRightTankFuel, newRightTankFuel))
+    if (std::isnan(newRightTankFuel) || qFuzzyCompare(mRightTankFuel, newRightTankFuel))
         return;
     mRightTankFuel = newRightTankFuel;
     emit rightTankFuelChanged();
@@ -632,7 +633,7 @@ double PrimaryFlightData::egt() const
 
 void PrimaryFlightData::setEgt(double newEgt)
 {
-    if (isnan(newEgt) || qFuzzyCompare(mEgt, newEgt))
+    if (std::isnan(newEgt) || qFuzzyCompare(mEgt, newEgt))
         return;
     mEgt = newEgt;
     emit egtChanged();
@@ -645,7 +646,7 @@ double PrimaryFlightData::fuelFlow() const
 
 void PrimaryFlightData::setFuelFlow(double newFuelFlow)
 {
-    if (isnan(newFuelFlow) || qFuzzyCompare(mFuelFlow, newFuelFlow))
+    if (std::isnan(newFuelFlow) || qFuzzyCompare(mFuelFlow, newFuelFlow))
         return;
     mFuelFlow = newFuelFlow;
     emit fuelFlowChanged();
@@ -658,7 +659,7 @@ double PrimaryFlightData::engineTemperature() const
 
 void PrimaryFlightData::setEngineTemperature(double newEngineTemperature)
 {
-    if (isnan(newEngineTemperature) || qFuzzyCompare(mEngineTemperature, newEngineTemperature))
+    if (std::isnan(newEngineTemperature) || qFuzzyCompare(mEngineTemperature, newEngineTemperature))
         return;
     mEngineTemperature = newEngineTemperature;
     emit engineTemperatureChanged();
@@ -671,7 +672,7 @@ double PrimaryFlightData::enginePressure() const
 
 void PrimaryFlightData::setEnginePressure(double newEnginePressure)
 {
-    if (isnan(newEnginePressure) || qFuzzyCompare(mEnginePressure, newEnginePressure))
+    if (std::isnan(newEnginePressure) || qFuzzyCompare(mEnginePressure, newEnginePressure))
         return;
     mEnginePressure = newEnginePressure;
     emit enginePressureChanged();
@@ -684,7 +685,7 @@ double PrimaryFlightData::vac() const
 
 void PrimaryFlightData::setVac(double newVac)
 {
-    if (isnan(newVac) || qFuzzyCompare(mVac, newVac))
+    if (std::isnan(newVac) || qFuzzyCompare(mVac, newVac))
         return;
     mVac = newVac;
     emit vacChanged();
@@ -697,7 +698,7 @@ double PrimaryFlightData::amp() const
 
 void PrimaryFlightData::setAmp(double newAmp)
 {
-    if (isnan(newAmp) || qFuzzyCompare(mAmp, newAmp))
+    if (std::isnan(newAmp) || qFuzzyCompare(mAmp, newAmp))
         return;
     mAmp = newAmp;
     emit ampChanged();
@@ -710,7 +711,7 @@ double PrimaryFlightData::rpm() const
 
 void PrimaryFlightData::setRpm(double newRpm)
 {
-    if (isnan(newRpm) || qFuzzyCompare(mRpm, newRpm))
+    if (std::isnan(newRpm) || qFuzzyCompare(mRpm, newRpm))
         return;
     mRpm = newRpm;
     emit rpmChanged();
