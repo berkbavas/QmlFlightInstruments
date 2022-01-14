@@ -1,4 +1,5 @@
 #include "PrimaryFlightData.h"
+#include <cmath>
 
 PrimaryFlightData::PrimaryFlightData(QObject *parent)
     : QObject(parent)
