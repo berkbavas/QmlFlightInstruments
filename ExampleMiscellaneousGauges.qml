@@ -14,7 +14,11 @@ Window {
     minimumHeight: 600
     visibility: Window.Maximized
     title: "Miscellaneous Gauges Example"
-    color: "#ffffff"
+    color: "#000000"
+
+
+    FontLoader { source: "Resources/Fonts/CenturyGothic.ttf" }
+
 
     GridLayout {
         columns: 3
@@ -53,6 +57,5 @@ Window {
             engineTemperature: pfd.engineTemperature
             enginePressure: pfd.enginePressure
         }
-
     }
 }

@@ -13,7 +13,7 @@ Window {
     minimumHeight: 600
     visibility: Window.Maximized
     title: "EFIS Example"
-    color: "#ffffff"
+    color: "#000000"
 
     Item {
         id: container

@@ -20,68 +20,41 @@ Window {
             margins: 16
         }
 
-        Item {
-            Layout.fillWidth: true
-            Layout.fillHeight: true
-
-            AirspeedIndicator {
-                radius: 0.5 * Math.min(parent.width, parent.height)
-                airspeed: pfd.airspeed
-            }
+        AirspeedIndicator {
+            radius: 200
+            airspeed: pfd.airspeed
         }
 
-        Item {
-            Layout.fillWidth: true
-            Layout.fillHeight: true
-
-            AttitudeIndicator {
-                radius: 0.5 * Math.min(parent.width, parent.height)
-                roll: pfd.roll
-                pitch: pfd.pitch
-            }
-        }
-
-        Item {
-            Layout.fillWidth: true
-            Layout.fillHeight: true
-
-            Altimeter {
-                radius: 0.5 * Math.min(parent.width, parent.height)
-                altitude: pfd.altitude
-                pressure: pfd.pressure
-            }
-        }
-
-        Item {
-            Layout.fillWidth: true
-            Layout.fillHeight: true
-
-            TurnCoordinator {
-                radius: 0.5 * Math.min(parent.width, parent.height)
-                turnRate: pfd.turnRate
-                slipSkid: pfd.slipSkid
-            }
+        AttitudeIndicator {
+            radius: 200
+            roll: pfd.roll
+            pitch: pfd.pitch
         }
 
 
-        Item {
-            Layout.fillWidth: true
-            Layout.fillHeight: true
-
-            HeadingIndicator {
-                radius: 0.5 * Math.min(parent.width, parent.height)
-                heading: pfd.heading
-            }
+        Altimeter {
+            radius: 200
+            altitude: pfd.altitude
+            pressure: pfd.pressure
         }
 
-        Item {
-            Layout.fillWidth: true
-            Layout.fillHeight: true
-
-            VerticalSpeedIndicator {
-                radius: 0.5 * Math.min(parent.width, parent.height)
-                climbRate: pfd.climbRate
-            }
+        TurnCoordinator {
+            radius: 200
+            turnRate: pfd.turnRate
+            slipSkid: pfd.slipSkid
         }
+
+
+        HeadingIndicator {
+            radius: 200
+            heading: pfd.heading
+        }
+
+
+        VerticalSpeedIndicator {
+            radius:200
+            climbRate: pfd.climbRate
+        }
+
     }
 }
