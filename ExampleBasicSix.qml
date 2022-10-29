@@ -10,49 +10,49 @@ Window {
     minimumHeight: 600
     visibility: Window.Maximized
     title: "Basic Six Example"
-    color: "#ffffff"
+    color: "#000000"
 
-    GridLayout {
+    Grid {
         columns: 3
 
         anchors {
-            fill: parent
+            centerIn: parent
             margins: 16
         }
 
         AirspeedIndicator {
-            radius: 200
+            radius: 250
             airspeed: pfd.airspeed
         }
 
         AttitudeIndicator {
-            radius: 200
+            radius: 250
             roll: pfd.roll
             pitch: pfd.pitch
         }
 
 
         Altimeter {
-            radius: 200
+            radius: 250
             altitude: pfd.altitude
             pressure: pfd.pressure
         }
 
         TurnCoordinator {
-            radius: 200
+            radius: 250
             turnRate: pfd.turnRate
             slipSkid: pfd.slipSkid
         }
 
 
         HeadingIndicator {
-            radius: 200
+            radius: 250
             heading: pfd.heading
         }
 
 
         VerticalSpeedIndicator {
-            radius:200
+            radius: 250
             climbRate: pfd.climbRate
         }
 
