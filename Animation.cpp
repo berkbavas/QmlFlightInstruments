@@ -1,5 +1,5 @@
 #include "Animation.h"
-
+#include <math.h>       /* sin & cos */
 #include <QDateTime>
 
 Animation::Animation(QObject *parent)
