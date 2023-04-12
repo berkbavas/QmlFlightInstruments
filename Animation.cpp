@@ -1,6 +1,7 @@
 #include "Animation.h"
 
 #include <QDateTime>
+#include <cmath>
 
 Animation::Animation(QObject *parent)
     : QObject(parent)
