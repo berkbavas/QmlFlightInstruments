@@ -9,12 +9,12 @@ Item {
 
     CustomImage {
         anchors.fill: parent
-        source: "qrc:/data/images/hi/hi_face.svg"
+        source: "qrc:/resources/Images/hi/hi_face.svg"
         rotation: -heading
     }
 
     CustomImage {
         anchors.fill: parent
-        source: "qrc:/data/images/hi/hi_case.svg"
+        source: "qrc:/resources/Images/hi/hi_case.svg"
     }
 }

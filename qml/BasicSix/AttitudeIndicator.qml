@@ -28,14 +28,14 @@ Item {
 
     CustomImage {
         anchors.fill: parent
-        source: "qrc:/data/images/ai/ai_back.svg"
+        source: "qrc:/resources/Images/ai/ai_back.svg"
         rotation: -roll
     }
 
     CustomImage {
         id: face
         anchors.fill: parent
-        source: "qrc:/data/images/ai/ai_face.svg"
+        source: "qrc:/resources/Images/ai/ai_face.svg"
 
         transform: [
             Rotation {
@@ -58,12 +58,12 @@ Item {
 
     CustomImage {
         anchors.fill: parent
-        source: "qrc:/data/images/ai/ai_ring.svg"
+        source: "qrc:/resources/Images/ai/ai_ring.svg"
         rotation: -roll
     }
 
     CustomImage {
         anchors.fill: parent
-        source: "qrc:/data/images/ai/ai_case.svg"
+        source: "qrc:/resources/Images/ai/ai_case.svg"
     }
 }

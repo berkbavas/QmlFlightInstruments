@@ -58,7 +58,7 @@ Item {
         y: -85
         width: 210
         height: 420
-        source: "qrc:/data/images/eadi/eadi_adi_back.svg"
+        source: "qrc:/resources/Images/eadi/eadi_adi_back.svg"
         sourceSize.height: 1680
         sourceSize.width: 840
         transform: [
@@ -84,7 +84,7 @@ Item {
         x: 110
         y: -175
         width: 80
-        source: "qrc:/data/images/eadi/eadi_adi_ladd.svg"
+        source: "qrc:/resources/Images/eadi/eadi_adi_ladd.svg"
         sourceSize.height: 2400
         sourceSize.width: 320
         transform: [
@@ -111,7 +111,7 @@ Item {
         x: 45
         y: 20
         width: 210
-        source: "qrc:/data/images/eadi/eadi_adi_roll.svg"
+        source: "qrc:/resources/Images/eadi/eadi_adi_roll.svg"
         sourceSize.height: 840
         sourceSize.width: 840
         transform: Rotation {
@@ -131,7 +131,7 @@ Item {
         x: 145.5
         y: 68
         width: 9
-        source: "qrc:/data/images/eadi/eadi_adi_slip.svg"
+        source: "qrc:/resources/Images/eadi/eadi_adi_slip.svg"
         sourceSize.height: 12
         sourceSize.width: 36
         transform: [
@@ -158,7 +158,7 @@ Item {
         x: 145
         y: 188
         width: 10
-        source: "qrc:/data/images/eadi/eadi_adi_doth.svg"
+        source: "qrc:/resources/Images/eadi/eadi_adi_doth.svg"
         sourceSize.height: 40
         sourceSize.width: 40
         visible: dotHVisible
@@ -172,7 +172,7 @@ Item {
         x: 213
         y: 120
         width: 10
-        source: "qrc:/data/images/eadi/eadi_adi_dotv.svg"
+        source: "qrc:/resources/Images/eadi/eadi_adi_dotv.svg"
         sourceSize.height: 40
         sourceSize.width: 40
         visible: dotVVisible
@@ -186,7 +186,7 @@ Item {
         x: 0
         y: 0
         width: 300
-        source: "qrc:/data/images/eadi/eadi_adi_scaleh.svg"
+        source: "qrc:/resources/Images/eadi/eadi_adi_scaleh.svg"
         sourceSize.height: 1200
         sourceSize.width: 1200
         visible: dotHVisible
@@ -197,7 +197,7 @@ Item {
         x: 0
         y: 0
         width: 300
-        source: "qrc:/data/images/eadi/eadi_adi_scalev.svg"
+        source: "qrc:/resources/Images/eadi/eadi_adi_scalev.svg"
         sourceSize.height: 1200
         sourceSize.width: 1200
         visible: dotVVisible
@@ -208,7 +208,7 @@ Item {
         x: 107
         y: 124.5
         height: 18
-        source: "qrc:/data/images/eadi/eadi_adi_fd.svg"
+        source: "qrc:/resources/Images/eadi/eadi_adi_fd.svg"
         sourceSize.height: 72
         sourceSize.width: 344
         visible: fdVisible
@@ -235,7 +235,7 @@ Item {
         x: 135
         y: 113
         height: 19
-        source: "qrc:/data/images/eadi/eadi_adi_fpm.svg"
+        source: "qrc:/resources/Images/eadi/eadi_adi_fpm.svg"
         sourceSize.height: 76
         sourceSize.width: 120
         transform: Translate {
@@ -249,7 +249,7 @@ Item {
         x: 135
         y: 113
         height: 19
-        source: "qrc:/data/images/eadi/eadi_adi_fpmx.svg"
+        source: "qrc:/resources/Images/eadi/eadi_adi_fpmx.svg"
         sourceSize.height: 76
         sourceSize.width: 120
         transform: Translate {
@@ -264,7 +264,7 @@ Item {
         x: 0
         y: 0
         height: 300
-        source: "qrc:/data/images/eadi/eadi_adi_mask.svg"
+        source: "qrc:/resources/Images/eadi/eadi_adi_mask.svg"
         sourceSize.height: 1200
         sourceSize.width: 1200
     }
@@ -274,7 +274,7 @@ Item {
         x: 142.5
         y: 206
         height: 4
-        source: "qrc:/data/images/eadi/eadi_adi_turn.svg"
+        source: "qrc:/resources/Images/eadi/eadi_adi_turn.svg"
         sourceSize.height: 16
         sourceSize.width: 60
         transform: Translate {
@@ -287,7 +287,7 @@ Item {
         x: 122
         y: 91
         width: 56
-        source: "qrc:/data/images/eadi/eadi_adi_stall.svg"
+        source: "qrc:/resources/Images/eadi/eadi_adi_stall.svg"
         sourceSize.height: 140
         sourceSize.width: 560
         visible: stallVisible

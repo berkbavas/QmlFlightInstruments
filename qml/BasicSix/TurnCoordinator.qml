@@ -10,13 +10,13 @@ Item {
 
     CustomImage {
         anchors.fill: parent
-        source: "qrc:/data/images/tc/tc_back.svg"
+        source: "qrc:/resources/Images/tc/tc_back.svg"
     }
 
     CustomImage {
         id: ball
         anchors.fill: parent
-        source: "qrc:/data/images/tc/tc_ball.svg"
+        source: "qrc:/resources/Images/tc/tc_ball.svg"
         transform: Rotation {
             origin.x: 0.5 * ball.width
             origin.y: -36 / 240 * ball.height
@@ -31,22 +31,22 @@ Item {
 
     CustomImage {
         anchors.fill: parent
-        source: "qrc:/data/images/tc/tc_face_1.svg"
+        source: "qrc:/resources/Images/tc/tc_face_1.svg"
     }
 
     CustomImage {
         anchors.fill: parent
-        source: "qrc:/data/images/tc/tc_face_2.svg"
+        source: "qrc:/resources/Images/tc/tc_face_2.svg"
     }
 
     CustomImage {
         anchors.fill: parent
-        source: "qrc:/data/images/tc/tc_mark.svg"
+        source: "qrc:/resources/Images/tc/tc_mark.svg"
         rotation: (turnRate / 3.0) * 20.0
     }
 
     CustomImage {
         anchors.fill: parent
-        source: "qrc:/data/images/tc/tc_case.svg"
+        source: "qrc:/resources/Images/tc/tc_case.svg"
     }
 }

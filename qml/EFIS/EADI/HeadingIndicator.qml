@@ -13,7 +13,7 @@ Item {
         x: 0
         y: 210
         height: 90
-        source: "qrc:/data/images/eadi/eadi_hsi_back.svg"
+        source: "qrc:/resources/Images/eadi/eadi_hsi_back.svg"
         sourceSize.height: 450
         sourceSize.width: 1500
     }
@@ -23,7 +23,7 @@ Item {
         x: 38
         y: 233
         width: 224
-        source: "qrc:/data/images/eadi/eadi_hsi_face.svg"
+        source: "qrc:/resources/Images/eadi/eadi_hsi_face.svg"
         sourceSize.height: 2240
         sourceSize.width: 2240
 
@@ -44,7 +44,7 @@ Item {
         x: 38
         y: 233
         width: 224
-        source: "qrc:/data/images/eadi/eadi_hsi_bug.svg"
+        source: "qrc:/resources/Images/eadi/eadi_hsi_bug.svg"
         sourceSize.height: 2240
         sourceSize.width: 2240
         transform: Rotation {
@@ -64,7 +64,7 @@ Item {
         x: 134
         y: 217
         height: 73
-        source: "qrc:/data/images/eadi/eadi_hsi_marks.svg"
+        source: "qrc:/resources/Images/eadi/eadi_hsi_marks.svg"
         sourceSize.height: 730
         sourceSize.width: 320
     }

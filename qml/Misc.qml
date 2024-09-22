@@ -18,7 +18,7 @@ Window {
     color: "#ffffff"
 
     FontLoader {
-        source: "qrc:/data/fonts/CenturyGothic.ttf"
+        source: "qrc:/resources/Fonts/CenturyGothic.ttf"
     }
     property double scaleRatio: Math.min(height / 1080, width / 1920)
     property double radius: 250 * scaleRatio

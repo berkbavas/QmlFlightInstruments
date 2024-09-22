@@ -15,7 +15,7 @@ Item {
     property alias labels: labels
 
     FontLoader {
-        source: "qrc:/data/fonts/Courier Std Bold.otf"
+        source: "qrc:/resources/Fonts/Courier Std Bold.otf"
     }
 
     AttitudeIndicator {

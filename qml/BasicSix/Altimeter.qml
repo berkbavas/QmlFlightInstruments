@@ -10,7 +10,7 @@ Item {
 
     CustomImage {
         anchors.fill: parent
-        source: "qrc:/data/images/alt/alt_face_1.svg"
+        source: "qrc:/resources/Images/alt/alt_face_1.svg"
         rotation: {
             let value = pressure
 
@@ -25,29 +25,29 @@ Item {
 
     CustomImage {
         anchors.fill: parent
-        source: "qrc:/data/images/alt/alt_face_2.svg"
+        source: "qrc:/resources/Images/alt/alt_face_2.svg"
     }
 
     CustomImage {
         anchors.fill: parent
-        source: "qrc:/data/images/alt/alt_face_3.svg"
+        source: "qrc:/resources/Images/alt/alt_face_3.svg"
         rotation: 0.0036 * altitude
     }
 
     CustomImage {
         anchors.fill: parent
-        source: "qrc:/data/images/alt/alt_hand_1.svg"
+        source: "qrc:/resources/Images/alt/alt_hand_1.svg"
         rotation: 0.036 * altitude
     }
 
     CustomImage {
         anchors.fill: parent
-        source: "qrc:/data/images/alt/alt_hand_2.svg"
+        source: "qrc:/resources/Images/alt/alt_hand_2.svg"
         rotation: 0.36 * (altitude % 1000)
     }
 
     CustomImage {
         anchors.fill: parent
-        source: "qrc:/data/images/alt/alt_case.svg"
+        source: "qrc:/resources/Images/alt/alt_case.svg"
     }
 }
