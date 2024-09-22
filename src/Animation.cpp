@@ -2,6 +2,8 @@
 
 #include <QDateTime>
 
+#include <cmath>
+
 Animation::Animation(QObject *parent)
     : QObject(parent)
     , mPlayTime(0.0)
@@ -15,39 +17,39 @@ void Animation::update()
     mPlayTime += (currentTime - mPreviousTime) / 200.0;
     mPreviousTime = currentTime;
 
-    mPfd->setAngleOfAttack(21.0 * sin(mPlayTime / 10.0));
-    mPfd->setAngleOfSideSlip(16.0 * sin(mPlayTime / 10.0));
-    mPfd->setRoll(180.0 * sin(mPlayTime / 50.0));
-    mPfd->setPitch(90.0 * sin(mPlayTime / 20.0));
-    mPfd->setHeading(360.0 * sin(mPlayTime / 40.0));
-    mPfd->setSlipSkid(1.0 * sin(mPlayTime / 10.0));
-    mPfd->setTurnRate(1.0 * sin(mPlayTime / 10.0));
-    mPfd->setIlsLOC(1.0 * sin(mPlayTime / 20.0));
-    mPfd->setIlsGS(1.0 * sin(mPlayTime / 20.0));
-    mPfd->setFdRoll(30.0 * sin(mPlayTime / 20.0));
-    mPfd->setFdPitch(10.0 * sin(mPlayTime / 20.0));
-    mPfd->setAirspeed(-100.0 * cos(mPlayTime / 10.0) + 100.0);
-    mPfd->setAltitude(-5000.0 * cos(mPlayTime / 40.0) + 5000.0);
-    mPfd->setPressure(2.0 * sin(mPlayTime / 20.0) + 30.0);
-    mPfd->setClimbRate(6 * sin(mPlayTime / 20.0));
+    mPfd->setAngleOfAttack(21.0 * std::sin(mPlayTime / 10.0));
+    mPfd->setAngleOfSideSlip(16.0 * std::sin(mPlayTime / 10.0));
+    mPfd->setRoll(180.0 * std::sin(mPlayTime / 50.0));
+    mPfd->setPitch(90.0 * std::sin(mPlayTime / 20.0));
+    mPfd->setHeading(360.0 * std::sin(mPlayTime / 40.0));
+    mPfd->setSlipSkid(1.0 * std::sin(mPlayTime / 10.0));
+    mPfd->setTurnRate(1.0 * std::sin(mPlayTime / 10.0));
+    mPfd->setIlsLOC(1.0 * std::sin(mPlayTime / 20.0));
+    mPfd->setIlsGS(1.0 * std::sin(mPlayTime / 20.0));
+    mPfd->setFdRoll(30.0 * std::sin(mPlayTime / 20.0));
+    mPfd->setFdPitch(10.0 * std::sin(mPlayTime / 20.0));
+    mPfd->setAirspeed(-100.0 * std::cos(mPlayTime / 10.0) + 100.0);
+    mPfd->setAltitude(-5000.0 * std::cos(mPlayTime / 40.0) + 5000.0);
+    mPfd->setPressure(2.0 * std::sin(mPlayTime / 20.0) + 30.0);
+    mPfd->setClimbRate(6 * std::sin(mPlayTime / 20.0));
     mPfd->setMachNumber(mPfd->airspeed() / 650.0);
-    mPfd->setHeadingBug(-360.0 * sin(mPlayTime / 40.0));
-    mPfd->setCourse(360.0 * sin(mPlayTime / 20.0));
-    mPfd->setVorDeviation(1.0 * sin(mPlayTime / 20.0));
-    mPfd->setBearing(-360.0 * sin(mPlayTime / 50.0));
-    mPfd->setDmeDistance(99.0 * sin(mPlayTime / 100.0));
-    mPfd->setAirspeedBug(-50.0 * cos(mPlayTime / 10.0) + 50.0);
-    mPfd->setAltitudeBug(-1000.0 * cos(mPlayTime / 40.0) + 1000.0);
+    mPfd->setHeadingBug(-360.0 * std::sin(mPlayTime / 40.0));
+    mPfd->setCourse(360.0 * std::sin(mPlayTime / 20.0));
+    mPfd->setVorDeviation(1.0 * std::sin(mPlayTime / 20.0));
+    mPfd->setBearing(-360.0 * std::sin(mPlayTime / 50.0));
+    mPfd->setDmeDistance(99.0 * std::sin(mPlayTime / 100.0));
+    mPfd->setAirspeedBug(-50.0 * std::cos(mPlayTime / 10.0) + 50.0);
+    mPfd->setAltitudeBug(-1000.0 * std::cos(mPlayTime / 40.0) + 1000.0);
 
-    mPfd->setLeftTankFuel(15 - 15 * cos(mPlayTime / 10.0));
-    mPfd->setRightTankFuel(15 - 15 * cos(mPlayTime / 20.0));
-    mPfd->setEgt(1300 - 600 * cos(mPlayTime / 10.0));
-    mPfd->setFuelFlow(10 - 10 * cos(mPlayTime / 10.0));
-    mPfd->setEngineTemperature(160 - 85 * cos(mPlayTime / 10.0));
-    mPfd->setEnginePressure(57.5 - 57.5 * cos(mPlayTime / 10.0));
-    mPfd->setVac(5 - 2 * cos(mPlayTime / 5.0));
-    mPfd->setAmp(60 * sin(mPlayTime / 10.0));
-    mPfd->setRpm(1750 - 1750 * cos(mPlayTime / 10.0));
+    mPfd->setLeftTankFuel(15 - 15 * std::cos(mPlayTime / 10.0));
+    mPfd->setRightTankFuel(15 - 15 * std::cos(mPlayTime / 20.0));
+    mPfd->setEgt(1300 - 600 * std::cos(mPlayTime / 10.0));
+    mPfd->setFuelFlow(10 - 10 * std::cos(mPlayTime / 10.0));
+    mPfd->setEngineTemperature(160 - 85 * std::cos(mPlayTime / 10.0));
+    mPfd->setEnginePressure(57.5 - 57.5 * std::cos(mPlayTime / 10.0));
+    mPfd->setVac(5 - 2 * std::cos(mPlayTime / 5.0));
+    mPfd->setAmp(60 * std::sin(mPlayTime / 10.0));
+    mPfd->setRpm(1750 - 1750 * std::cos(mPlayTime / 10.0));
 }
 
 void Animation::init()
