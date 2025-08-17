@@ -32,12 +32,11 @@ SVG files are from Marek's repository. See `Resources/Images/LICENSE` for copyri
 
 ## Demo Videos
 
-- **EFIS**  
-  [Watch EFIS Demo](https://github.com/user-attachments/assets/13cdcce1-c171-4f1a-831c-717e8199d89a)
-- **Basic Six**  
-  [Watch Basic Six Demo](https://github.com/user-attachments/assets/7cdaf409-05d2-4da4-9133-938577d28892)
-- **Miscellaneous**  
-  [Watch Miscellaneous Gauges Demo](https://github.com/user-attachments/assets/648b4862-01e2-4189-a004-1b61f6f0a597)
+[EFIS Demo](https://github.com/user-attachments/assets/13cdcce1-c171-4f1a-831c-717e8199d89a)
+
+[Basic Six Demo](https://github.com/user-attachments/assets/7cdaf409-05d2-4da4-9133-938577d28892) 
+
+[Miscellaneous Gauges Demo](https://github.com/user-attachments/assets/648b4862-01e2-4189-a004-1b61f6f0a597)
 
 ## Credits & License
 
